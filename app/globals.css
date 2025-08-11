@@ -1,0 +1,251 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap");
+@import "tailwindcss";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-ai-primary: var(--ai-primary);
+  --color-ai-secondary: var(--ai-secondary);
+  --color-ai-accent: var(--ai-accent);
+  --color-surface-dark: var(--surface-dark);
+  --color-surface-light: var(--surface-light);
+  --color-text-primary-dark: var(--text-primary-dark);
+  --color-text-primary-light: var(--text-primary-light);
+  --color-text-secondary-dark: var(--text-secondary-dark);
+  --color-text-secondary-light: var(--text-secondary-light);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+}
+
+:root {
+  --radius: 8px;
+  /* 개선된 라이트 모드 색상 - 눈에 편안하고 접근성 향상 */
+  --background: #fafafa;
+  --foreground: #1e293b;
+  --card: #ffffff;
+  --card-foreground: #1e293b;
+  --popover: #ffffff;
+  --popover-foreground: #1e293b;
+  --primary: #6366f1;
+  --primary-foreground: #ffffff;
+  --secondary: #f1f5f9;
+  --secondary-foreground: #334155;
+  --muted: #f1f5f9;
+  --muted-foreground: #64748b;
+  --accent: #0ea5e9;
+  --accent-foreground: #ffffff;
+  --destructive: #ef4444;
+  --border: #e2e8f0;
+  --input: #f8fafc;
+  --ring: #6366f1;
+  --chart-1: #6366f1;
+  --chart-2: #8b5cf6;
+  --chart-3: #06b6d4;
+  --chart-4: #10b981;
+  --chart-5: #f59e0b;
+  --sidebar: #f8fafc;
+  --sidebar-foreground: #334155;
+  --sidebar-primary: #6366f1;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #f1f5f9;
+  --sidebar-accent-foreground: #475569;
+  --sidebar-border: #e2e8f0;
+  --sidebar-ring: #6366f1;
+  --ai-primary: #6366f1;
+  --ai-secondary: #8b5cf6;
+  --ai-accent: #0ea5e9;
+  --surface-dark: #1e293b;
+  --surface-light: #f8fafc;
+  --text-primary-dark: #f1f5f9;
+  --text-primary-light: #1e293b;
+  --text-secondary-dark: #94a3b8;
+  --text-secondary-light: #64748b;
+  --success: #10b981;
+  --warning: #f59e0b;
+  --youtube-red: #dc2626;
+  --youtube-red-hover: #b91c1c;
+  --youtube-dark: #0f0f0f;
+  --youtube-accent: #ef4444;
+}
+
+.dark {
+  --background: #0f172a;
+  --foreground: #f1f5f9;
+  --card: #1e293b;
+  --card-foreground: #f1f5f9;
+  --popover: #1e293b;
+  --popover-foreground: #f1f5f9;
+  --primary: #6366f1;
+  --primary-foreground: #ffffff;
+  --secondary: #334155;
+  --secondary-foreground: #f1f5f9;
+  --muted: #334155;
+  --muted-foreground: #94a3b8;
+  --accent: #06b6d4;
+  --accent-foreground: #f1f5f9;
+  --destructive: #ef4444;
+  --border: #334155;
+  --input: #334155;
+  --ring: #6366f1;
+  --chart-1: #6366f1;
+  --chart-2: #8b5cf6;
+  --chart-3: #06b6d4;
+  --chart-4: #10b981;
+  --chart-5: #f59e0b;
+  --sidebar: #1e293b;
+  --sidebar-foreground: #f1f5f9;
+  --sidebar-primary: #6366f1;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #334155;
+  --sidebar-accent-foreground: #f1f5f9;
+  --sidebar-border: #334155;
+  --sidebar-ring: #6366f1;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.6;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 600;
+    letter-spacing: -0.025em;
+    line-height: 1.2;
+  }
+
+  body,
+  p,
+  span,
+  div {
+    font-family: "Inter", sans-serif;
+  }
+
+  /* 라이트 모드에서 더 나은 가독성을 위한 텍스트 스타일 */
+  p {
+    color: var(--muted-foreground);
+    line-height: 1.7;
+  }
+
+  /* 링크와 버튼의 라이트 모드 개선 */
+  a {
+    color: var(--primary);
+    transition: color 0.2s ease;
+  }
+
+  a:hover {
+    color: var(--accent);
+  }
+}
+
+/* 적응형 글래스 효과 - 라이트/다크 모드 자동 전환 */
+@utility glass-effect {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.dark .glass-effect {
+  background: rgba(15, 23, 42, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3),
+    0 2px 4px -1px rgba(0, 0, 0, 0.2);
+}
+
+@utility glass-effect-dark {
+  background: rgba(15, 23, 42, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* 라이트 모드에서도 잘 보이는 그라데이션 텍스트 */
+@utility gradient-text {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6, #0ea5e9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* 유튜브 테마 그라데이션 */
+@utility youtube-gradient {
+  background: linear-gradient(135deg, #dc2626, #ef4444, #b91c1c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* 라이트 모드용 히어로 그라데이션 */
+@utility hero-gradient {
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 50%, #e2e8f0 100%);
+}
+
+@utility hero-gradient-dark {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+}
+
+/* 라이트 모드용 부드러운 글로우 효과 */
+@utility aurora-glow {
+  box-shadow: 0 0 30px rgba(99, 102, 241, 0.15),
+    0 0 60px rgba(14, 165, 233, 0.1);
+}
+
+@utility aurora-glow-dark {
+  box-shadow: 0 0 50px rgba(99, 102, 241, 0.3),
+    0 0 100px rgba(139, 92, 246, 0.2);
+}
+
+#root {
+  margin: auto;
+}
