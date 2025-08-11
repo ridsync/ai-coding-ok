@@ -64,7 +64,7 @@ const nextConfig = {
       config.devtool = "source-map";
       config.optimization = {
         ...config.optimization,
-        minimize: false,
+        minimize: true,
       };
     }
     config.plugins = config.plugins || [];
